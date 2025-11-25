@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const favicon = '../images/Paul_Jhon_Magbanua_Logo-white.png'
+
+//Components Imports Here
+import NavigationBar from '../components/NavigationBar'
+import HeroSection from '../components/HeroSection'
+---
+
+<link rel="icon" type="image/favicon" href={favicon}>
+<BaseLayout title="Home Page">
+	<NavigationBar client:visible />
+	<HeroSection />
+</BaseLayout>

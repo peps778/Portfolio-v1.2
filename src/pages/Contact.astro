@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = "Contact Me!"
+const favicon = '../images/Paul_Jhon_Magbanua_Logo-white.png'
+
+
+import NavigationBar from '../components/NavigationBar'
+---
+<link rel="icon" type="image/favicon" href={favicon}>
+<BaseLayout title={title}>
+    <NavigationBar client:visible />
+</BaseLayout>

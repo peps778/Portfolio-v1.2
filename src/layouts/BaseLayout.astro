@@ -1,0 +1,17 @@
+---
+import '../styles/global.css';
+import BaseHead from '../layouts/BaseHead.astro'
+const {title} = Astro.props;
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <BaseHead title={title}/>
+</head>
+<body class="bg-whiteBackground">
+    <slot />
+</body>
+</html>
