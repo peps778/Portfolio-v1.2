@@ -8,6 +8,9 @@
     --color-colorForText: #FFFFFF;
 }
 
-.body {
+html {
     scroll-behavior: smooth;
 }
+
+
+

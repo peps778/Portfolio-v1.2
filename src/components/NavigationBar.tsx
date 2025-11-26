@@ -1,8 +1,10 @@
 import React from 'react';
+const About = '../components/AboutSection'
+
 const Logo = '../images/Paul_Jhon_Magbanua_Logo-white.png';
 
 // Tailwind Variables
-const NavBarVariables = 'bg-black font-poppins p-2 flex justify-center mt-5 w-fit justify-self-center rounded-4xl px-10 sticky top-4 max-w-6xl'
+const NavBarVariables = 'bg-black font-poppins p-2 flex justify-center mt-5 w-fit justify-self-center rounded-4xl px-10 sticky top-4 max-w-6xl z-10'
 const textHover = 'hover:scale-110 transform transition duration-30 ease-in-out hover:text-green'
 const buttonHover = 'py-1 px-6 bg-green rounded-2xl stroke-1 border border-white hover:bg-green-400 hover:scale-110 transform transition duration-30 ease-in-out'
 
@@ -18,13 +20,13 @@ function NavigationBar() {
                     </div>
                 </li>
                 <li className={textHover}>
-                    <a href="/">Home</a>
+                    <a href='/'>Home</a>
                 </li>
                 <li className={textHover}>
-                    <a href="/">About</a>
+                    <a href='#About'>About</a>
                 </li>
                 <li className={textHover}>
-                    <a href="/">Skills</a>
+                    <a href="#Skills">Skills</a>
                 </li>
                 <li className={textHover}>
                     <a href="/">Experience</a>

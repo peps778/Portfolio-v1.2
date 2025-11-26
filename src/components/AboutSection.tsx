@@ -9,7 +9,7 @@ const videoSource = '../videos/test_video.mp4'
 function  AboutSection() {
     return(
         <>
-            <div className="bg-black text-center pt-25 pb-35">
+            <div id="About" className="bg-black text-center pt-25 pb-35">
                 <h1 className={TitleSyle}>About</h1>
                 <p className="text-white mb-20 text-3xl">I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, <br /> automation, and CRM management (GoHighLevel). I deliver efficient, creative, <br />and results-driven digital solutions.</p>
 
