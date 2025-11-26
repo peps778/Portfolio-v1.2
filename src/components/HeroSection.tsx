@@ -16,8 +16,8 @@ function HeroSection() {
             </p>
         </div>
 
-        {/* Another Grid */}
-        <div id="imageAndText" className=" w-fit gap-10 p-15 flex justify-center justify-self-center">
+        {/* Another container */}
+        <div id="imageAndText" className=" w-fit gap-10 p-15 flex justify-center justify-self-center pb-20">
             <div id="imageSection">
                 <img src={heroImageSrc} alt="Paul Jhon Magbanua's Home Page Image" />
             </div>
@@ -30,6 +30,7 @@ function HeroSection() {
                 </button>
             </div>
         </div>
+  
         </>
     )
 }

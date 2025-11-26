@@ -5,10 +5,14 @@ const favicon = '../images/Paul_Jhon_Magbanua_Logo-white.png'
 //Components Imports Here
 import NavigationBar from '../components/NavigationBar'
 import HeroSection from '../components/HeroSection'
+import AboutSection from '../components/AboutSection'
+import SkillSection from '../components/SkillSection'
 ---
 
 <link rel="icon" type="image/favicon" href={favicon}>
 <BaseLayout title="Home Page">
 	<NavigationBar client:visible />
-	<HeroSection />
+	<HeroSection client:idle />
+	<AboutSection client:visible /> 
+	<SkillSection client:visible /> 
 </BaseLayout>

@@ -1,0 +1,1 @@
+export const TitleSyle = 'text-green text-6xl pb-10 font-bold justify-self-center font-poppins';
