@@ -8,21 +8,21 @@ const CardData: Card[] = [
     title: "Front-End Web Development & CMS",
     description:
       "I build responsive websites with clean, efficient code and integrate Content Management Systems (WordPress, etc.) to make content easy to manage and update. My work also focuses on layout, UI, and visual design to ensure a polished user experience.",
-    className: "text-white mt-20",
+    className: " mt-20 pb-15 pt-5",
   },
   {
     id: 2,
     title: "CRM Management",
     description:
       "I manage customer relationship systems, especially GoHighLevel (GHL), creating custom campaigns, SMS automations, A2P verification, and lead management workflows. I also handle troubleshooting, client research, and optimizing campaigns to ensure smooth operations and effective marketing outcomes.",
-    className: "bg-black text-white",
+    className: "",
   },
   {
     id: 3,
     title: "Automation",
     description:
       "I streamline business processes using Zapier and GoHighLevel, implementing birthday reminders, billing notifications, appointment scheduling automations, and Asana task automations. These workflows save time, reduce errors, and improve efficiency across marketing and operational tasks.",
-    className: "text-white mt-20",
+    className: " mt-20",
   },
 ];
 
@@ -60,9 +60,9 @@ export default function CardList({ className = "" }: { className?: string }) {
 // Individual card component
 function CardComponent({ title, description, className = "" }: CardProps) {
   return (
-    <div className={`bg-black h-fit border-green border-5 px-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 rounded-2xl shadow-md ${className}`}>
-      <h1 className="text-xl font-bold mb-2">{title}</h1>
-      <p className="mt-10">{description}</p>
+    <div className={`bg-primary h-fit hover:scale-105 hover:bg-primary hover:text-white border-green hover:border-4 border-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 rounded-2xl shadow-md ${className}`}>
+      <h1 className="text-largeParagraph font-bold mb-2 text-white">{title}</h1>
+      <p className="mt-10 text-smallParagraph text-white">{description}</p>
     </div>
   );
 }

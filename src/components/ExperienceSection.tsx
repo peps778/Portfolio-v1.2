@@ -7,10 +7,11 @@ export default function ExperienceSection() {
             <h1 className={TitleSyle}>Experience</h1>
 
             <WorkCard />
-    
-            <p className='text-white text-center px-90 mt-10 mb-35'>At NYX Virtual Solutions, I provide comprehensive remote support to ensure smooth daily operations for clients and internal teams. My role involves managing administrative tasks, coordinating communication, and maintaining workflow efficiency in a fast-paced work-from-home setup. I also contribute to frontend development tasks, assisting with UI updates, website fixes, and implementing small feature enhancements to improve user experience.</p>
-
-            <div className='bg-transparent border border-green rounded-full px-10 w-fit text-white text-center justify-self-center'>
+            <div className="max-w-8xl mx-auto w-5xl text-largeParagraph mt-10 mb-30">
+                <p className='text-white text-center'>At NYX Virtual Solutions, I provide comprehensive remote support to ensure smooth daily operations for clients and internal teams. My role involves managing administrative tasks, coordinating communication, and maintaining workflow efficiency in a fast-paced work-from-home setup. I also contribute to frontend development tasks, assisting with UI updates, website fixes, and implementing small feature enhancements to improve user experience.</p>
+            </div>
+            
+            <div className='bg-transparent border border-green rounded-full px-10 w-fit mb-20 text-white text-center text-smallParagraph justify-self-center'>
                 <p>Turning chaos into clarity—one task <br /> and one pixel at a time.</p>
             </div>
         </section>
@@ -24,7 +25,7 @@ export function WorkCard() {
 
     return (
         
-    <article className="text-white grid grid-cols-2 items-center w-fit justify-self-center mr-20">
+    <article className="text-white grid grid-cols-2 items-center w-fit justify-self-center mr-40 mt-30">
         <img src={cardImage} alt="Company logo of Nyx Virtual Solution" className="w-40 ml-auto" />
     
         <div className='ml-5'>

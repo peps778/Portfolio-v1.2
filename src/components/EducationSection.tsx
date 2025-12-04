@@ -11,13 +11,13 @@ type EducationEntryType = {
 export function EducationEntry({ name, degree, period, award }: EducationEntryType) {
     return (
         <>
-            <img className='col-span-2 mx-auto mt-8' src={educationImage} alt="Education logo" />
+            <img className='col-span-1 mx-auto mt-8' src={educationImage} alt="Education logo" />
 
-            <div className='col-span-7 w-100'>
-                <h1 className='text-header mt-15'>{name}</h1>
-                <p>{degree}</p>
-                {award && <p>{award}</p>}  {/* Conditional rendering */}
-                <p>{period}</p>
+            <div className='col-span-9 w-fit'>
+                <h1 className='text-header mt-10'>{name}</h1>
+                <p className='text-largeParagraph'>{degree}</p>
+                {award && <p className='text-largeParagraph'>{award}</p>}  {/* Conditional rendering */}
+                <p className='text-largeParagraph'>{period}</p>
             </div>
 
         </>
@@ -45,10 +45,10 @@ export default function EducationSection() {
     ]
 
     return (
-        <section id="education" className='mb-100'>
+        <section id="Education" className='mb-50 mt-20'>
             <h1 className={TitleSyle}>Education</h1>
 
-            <div className="bg-primary text-white grid grid-cols-10 items-center justify-self-center px-20 pb-10 mx-10 align-items-center rounded-2xl">
+            <div className="bg-primary text-white grid grid-cols-10 gap-3 items-center align-start justify-self-center px-20 pb-10 mx-10 align-items-center rounded-2xl">
                 {educationData.map((edu, index) => (
                     <EducationEntry key={index} name={edu.name} degree={edu.degree} period={edu.period} award={edu.award} />
                 ))}

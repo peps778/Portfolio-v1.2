@@ -14,9 +14,10 @@
     --font-secondary: 'Verdana', sans-serif;
 
     --text-hero: 4rem; 
-    --text-header: 1.625rem;
-    --text-largeParagraph: 1.25rem; /**/
-    --text-smallParagraph: 0.6875rem;
+    --text-header: 2rem;
+    --text-largeParagraph: 1.5rem; /**/
+    --text-smallParagraph: 1.3rem;
+    --text-base: 0.6rem;
 }
 
 html {

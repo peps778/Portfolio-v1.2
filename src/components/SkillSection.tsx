@@ -20,8 +20,8 @@ function SkillSection() {
             <div id="CardsContainer" className="flex flex-row rounded-3xl text-center mt-1 mb-20 lg:max-w-6xl justify-self-center">
                 <CardComponent />
             </div>
-            <p className='text-center mb-6'>Hands-on experience with a variety of tools and platforms</p>
-            <div className='border-2 border-black rounded-xl justify-self-center w-200 bg-transparent z-10 h-fit px-2 padding-transparent'>
+            <p className='text-center text-smallParagraph mb-6 mt-20'><i>Hands-on experience with a variety of <br /> tools and platforms</i></p>
+            <div className='border-2 border-black rounded-full justify-self-center w-200 bg-transparent z-1 h-fit px-10 padding-transparent'>
                 <Carousel images={CarouselImage}/>
             </div>
         </section>
