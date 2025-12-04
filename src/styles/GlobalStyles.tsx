@@ -1,1 +1,1 @@
-export const TitleSyle = 'text-green text-6xl py-10 font-bold justify-self-center font-poppins';
+export const TitleSyle = 'text-green text-6xl mb-15 font-bold justify-self-center font-poppins';

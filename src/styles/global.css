@@ -6,10 +6,22 @@
     --color-whiteBackground: #F4F4FE;
     --color-bottomFooter: #323646;
     --color-colorForText: #FFFFFF;
+
+    --text-green: #36DE55;
+    --text-white: #f4f4fe;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Verdana', sans-serif;
+
+    --text-hero: 4rem; 
+    --text-header: 1.625rem;
+    --text-largeParagraph: 1.25rem; /**/
+    --text-smallParagraph: 0.6875rem;
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 

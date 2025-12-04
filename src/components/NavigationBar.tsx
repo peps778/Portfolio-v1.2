@@ -6,7 +6,7 @@ const Logo = '../images/Paul_Jhon_Magbanua_Logo-white.png';
 // Tailwind Variables
 const NavBarVariables = 'bg-black font-poppins p-2 flex justify-center mt-5 w-fit justify-self-center rounded-4xl px-10 sticky top-4 max-w-6xl z-10'
 const textHover = 'hover:scale-110 transform transition duration-30 ease-in-out hover:text-green'
-const buttonHover = 'py-1 px-6 bg-green rounded-2xl stroke-1 border border-white hover:bg-green-400 hover:scale-110 transform transition duration-30 ease-in-out'
+const buttonHover = 'py-1 px-6 bg-green rounded-full stroke-1 border border-white hover:bg-green-400 hover:scale-110 transform transition duration-30 ease-in-out'
 
 function NavigationBar() {
     return (
@@ -29,10 +29,10 @@ function NavigationBar() {
                     <a href="#Skills">Skills</a>
                 </li>
                 <li className={textHover}>
-                    <a href="/">Experience</a>
+                    <a href="#Experience">Experience</a>
                 </li>
                 <li className={textHover}>
-                    <a href="/">Education</a>
+                    <a href="#Education">Education</a>
                 </li>
                 <li>
                     <button className={buttonHover} ><a href="/Contact">Contact</a></button>
