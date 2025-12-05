@@ -9,9 +9,9 @@ import NavigationBar from '../components/NavigationBar'
 import FooterSection from '../components/FooterSection';
 ---
 <link rel="icon" type="image/favicon" href={favicon}>
-<BaseLayout title={title}>
+<BaseLayout client:load title={title}>
     <NavigationBar client:visible />
-    <ContactSection />
+    <ContactSection client:load />
     <FooterSection client:visible />
 
 </BaseLayout>

@@ -13,9 +13,9 @@ import EducationSection from '../components/EducationSection';
 import FooterSection from '../components/FooterSection';
 ---
 <link rel="icon" type="image/favicon" href={favicon}>
-<BaseLayout title="Home Page">
-	<NavigationBar client:visible />
-	<HeroSection client:idle />
+<BaseLayout client:load title="Home Page">
+	<NavigationBar client:load />
+	<HeroSection client:load />
 	<AboutSection client:visible /> 
 	<SkillSection client:visible /> 
 	<ExperienceSection client:visible />
