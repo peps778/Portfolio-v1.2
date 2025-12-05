@@ -8,7 +8,8 @@
     --color-colorForText: #FFFFFF;
 
     --text-green: #36DE55;
-    --text-white: #f4f4fe;
+    --text-customWhite: #f4f4fe;
+    --text-customGray: #7A7A7A;
 
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Verdana', sans-serif;

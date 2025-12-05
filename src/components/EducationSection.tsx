@@ -14,10 +14,10 @@ export function EducationEntry({ name, degree, period, award }: EducationEntryTy
             <img className='col-span-1 sm:col-span-2 lg:ml-auto lg:mt-8 sm:ml-10' src={educationImage} alt="Education logo" />
 
             <div className='col-span-9 sm:col-span-8 lg:w-fit  sm:ml-10 sm:mt-10 sm:mx-10'>
-                <h1 className='lg:text-header lg:mt-10 sm:text-2xl'>{name}</h1>
-                <p className='lg:text-largeParagraph sm:text-mobileParagraph'>{degree}</p>
-                {award && <p className='lg:text-largeParagraph sm:text-mobileParagraph'>{award}</p>}  {/* Conditional rendering */}
-                <p className='lg:text-largeParagraph sm:text-mobileParagraph'>{period}</p>
+                <h1 className='lg:text-header font-primary lg:mt-10 sm:text-2xl'>{name}</h1>
+                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{degree}</p>
+                {award && <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{award}</p>}  {/* Conditional rendering */}
+                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{period}</p>
             </div>
 
         </>

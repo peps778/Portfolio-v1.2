@@ -4,11 +4,11 @@ export default function ContactForm() {
     const inputVariables = "bg-353846 border border-white rounded-2xl px-4 py-2 w-full";
 
     return (
-        <form className="bg-black text-white rounded-2xl mt-15 px-6 py-6 w-[90%] max-w-md ml-10">
-            <h1 className="text-green text-header text-center font-bold">
+        <form className="bg-black text-white rounded-2xl mt-15 px-6 py-6 w-[90%] max-w-md lg:mr-20 md:ml-10 sm:justify-self-center ">
+            <h1 className="text-green text-header text-center font-bold font-primary">
                 Contact Me!
             </h1>
-            <p className="text-center mb-6">
+            <p className="text-center mb-6 font-secondary ">
                 <i>I’m excited to hear about your project.</i> 
             </p>
 
@@ -52,7 +52,7 @@ export default function ContactForm() {
             {/* Consent */}
             <div className="flex items-start gap-2 mt-4">
                 <input type="checkbox" id="checkbox" className="scale-150 mt-1 ml-1" required />
-                <label htmlFor="checkbox" className="text-sm leading-tight">
+                <label htmlFor="checkbox" className="text-sm leading-tight font-secondary text-customGray">
                     I consent to the collection and use of my information and
                     agree to receive communications from Paul Jhon Magbanua via
                     email and SMS.
@@ -62,8 +62,7 @@ export default function ContactForm() {
             {/* Button */}
             <button
                 type="submit"
-                className="mt-6 w-full bg-green border-2 border-white rounded-2xl py-2 font-semibold"
-            >
+                className="mt-6 w-full bg-green border-2 border-white rounded-2xl py-2 font-semibold font-secondary">
                 Let's Connect
             </button>
         </form>

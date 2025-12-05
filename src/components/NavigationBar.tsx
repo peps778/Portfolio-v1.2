@@ -25,15 +25,15 @@ function NavigationBar() {
             alt="Website logo of Paul Jhon Magbanua"
             className="h-14 md:h-16"
           />
-          <h1 className="text-white font-bold text-lg md:text-xl leading-tight hover:text-green">
+          <h1 className="text-white font-bold text-lg md:text-xl leading-tight hover:text-green font-primary">
             Paul Jhon <br /> Magbanua
           </h1>
         </div>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex items-center gap-12 text-colorForText text-2xl">
+        <ul className="hidden md:flex items-center gap-12 text-colorForText text-2xl font-secondary">
           <li className={textHover}>
-            <a href="/#home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className={textHover}>
             <a href="/#about">About</a>
@@ -66,7 +66,7 @@ function NavigationBar() {
       {/* MOBILE MENU DROPDOWN */}
       {open && (
         <div className="md:hidden bg-primary text-white rounded-3xl mt-2 w-[90%] mx-auto px-6 py-4 text-xl space-y-4 sticky top-25">
-          <a className="block hover:text-green" href="/#home" onClick={() => setOpen(false)}>
+          <a className="block hover:text-green" href="/" onClick={() => setOpen(false)}>
             Home
           </a>
           <a className="block hover:text-green" href="/#about" onClick={() => setOpen(false)}>

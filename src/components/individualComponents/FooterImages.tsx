@@ -31,7 +31,7 @@ const socialIcons = [
             <hr className="border-t border-white my-5 w-full max-w-xs" />
             
             
-            <p className="text-center text-white text-lg mt-0 mb-4 tracking-wider">
+            <p className="text-center text-white text-lg mt-0 mb-4 tracking-wider font-secondary">
                 Skilled • Collaborative • Detail Oriented
             </p>
         </div>
