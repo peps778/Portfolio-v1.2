@@ -4,7 +4,7 @@ const Logo = '../images/Paul_Jhon_Magbanua_Logo-white.png';
 
 // Tailwind Variables
 const NavBarVariables =
-  'bg-primary font-poppins p-2 flex justify-between items-center mt-5 w-[95%] max-w-6xl mx-auto rounded-4xl px-6 sticky top-4 z-10 sm:sticky sm:top-5';
+  'bg-primary font-poppins p-2 flex justify-between items-center mt-5 w-[95%] max-w-6xl mx-auto rounded-4xl px-13 sticky top-4 z-10 sm:sticky sm:top-5 lg:text-1xl md:text-xl sm:text-2xl';
 
 const textHover =
   'hover:scale-110 transform transition duration-300 ease-in-out hover:text-green';
@@ -18,20 +18,11 @@ function NavigationBar() {
   return (
     <>
       <nav className={NavBarVariables}>
-        {/* LEFT SIDE – LOGO & NAME */}
-        <div id="LogoAndName" className="flex items-center gap-3">
-          <img
-            src={Logo}
-            alt="Website logo of Paul Jhon Magbanua"
-            className="h-14 md:h-16"
-          />
-          <h1 className="text-white font-bold text-lg md:text-xl leading-tight hover:text-green font-primary">
-            Paul Jhon <br /> Magbanua
-          </h1>
-        </div>
+        {/* LEFT SIDE >– LOGO & NAME */}
+        <NavImageName />
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex items-center gap-12 text-colorForText text-2xl font-secondary">
+        <ul className="hidden md:flex items-center gap-7 text-colorForText font-secondary">
           <li className={textHover}>
             <a href="/">Home</a>
           </li>
@@ -55,10 +46,7 @@ function NavigationBar() {
         </ul>
 
         {/* MOBILE MENU BUTTON */}
-        <button
-          className="md:hidden text-white text-4xl hover:text-green"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="md:hidden text-white text-4xl hover:text-green" onClick={() => setOpen(!open)}>
           {open ? '✕' : '☰'}
         </button>
       </nav>
@@ -91,3 +79,16 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
+
+export function NavImageName() {
+  return(
+    <div id="LogoAndName" className="flex items-center gap-3">
+        <a href="/">
+              <img src={Logo} alt="Website logo of Paul Jhon Magbanua" className="h-14 md:h-16" />
+        </a>
+          <h1 className="text-white font-bold lg:text-2xl sm:text-lg md:text-xl leading-tight hover:text-green font-primary">
+              <a href="/">Paul Jhon <br /> Magbanua</a>
+          </h1>
+        </div>
+  )
+}

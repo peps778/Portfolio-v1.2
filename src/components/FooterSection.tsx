@@ -22,7 +22,7 @@ export default function FooterSection() {
 
 
                 <div className="flex-1 md:flex-2 lg:ml-20 sm:text-center lg:text-left ">
-                    <h1 className="lg:text-header mb-1 font-bold text-green">Contact Information:</h1>
+                    <h1 className="lg:text-header mb-1 font-bold text-green font-primary">Contact Information:</h1>
                     <p className={footerVariables}>work.paulmagbanua@gmail.com</p>
                     <p className={footerVariables}>+63 9958222528</p>
                     <p className={footerVariables}>Philippines</p>
