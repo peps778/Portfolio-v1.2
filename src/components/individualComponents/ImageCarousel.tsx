@@ -120,7 +120,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, speed = 1 }) => {
           <img
             key={i}
             src={src}
-            className="h-20 w-auto shrink-0 rounded-lg object-cover pointer-events-none" 
+            className="lg:h-20 md:h-20 sm:h-13 shrink-0 rounded-lg object-cover pointer-events-none" 
             alt={`carousel-item-${i}`}
           />
         ))}

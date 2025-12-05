@@ -12,7 +12,6 @@ import ExperienceSection from '../components/ExperienceSection';
 import EducationSection from '../components/EducationSection';
 import FooterSection from '../components/FooterSection';
 ---
-
 <link rel="icon" type="image/favicon" href={favicon}>
 <BaseLayout title="Home Page">
 	<NavigationBar client:visible />
@@ -23,3 +22,30 @@ import FooterSection from '../components/FooterSection';
 	<EducationSection client:visible />
 	<FooterSection client:visible />
 </BaseLayout>
+<script>
+  const sections = ["home", "about", "skills", "experience", "education"];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          document.title =
+            id.charAt(0).toUpperCase() + id.slice(1) + " | Paul Jhon Magbanua";
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  function attachObserver() {
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  }
+
+  document.addEventListener("astro:after-swap", attachObserver);
+  window.addEventListener("load", attachObserver);
+  setTimeout(attachObserver, 500);
+</script>

@@ -13,11 +13,22 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Verdana', sans-serif;
 
+    /*Desktop Sizes*/
     --text-hero: 4rem; 
     --text-header: 2rem;
-    --text-largeParagraph: 1.5rem; /**/
+    --text-largeParagraph: 1.5rem; 
     --text-smallParagraph: 1.3rem;
-    --text-base: 0.6rem;
+    /*Mobile Sizes*/
+    --text-mobileHero: 2rem;
+    --text-mobileHeadline: 1.7rem;
+    --text-mobileParagraph: 1rem;
+
+
+
+    --breakpoint-sm: 380px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 976px;
+
 }
 
 html {
