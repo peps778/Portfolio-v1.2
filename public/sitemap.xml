@@ -3,7 +3,6 @@
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage -->
   <url>
     <loc>https://magbanua-pauljhon.website/</loc>
     <lastmod>2025-12-06</lastmod>
@@ -15,7 +14,6 @@
     </image:image>
   </url>
 
-  <!-- Contact Page -->
   <url>
     <loc>https://magbanua-pauljhon.website/Contact</loc>
     <lastmod>2025-12-06</lastmod>
