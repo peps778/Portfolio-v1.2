@@ -6,12 +6,12 @@ const WhatsAppIcon = './images/whatsapp-icon.png';
 const GitHubIcon = './images/github-icon.png';
 
 const socialIcons = [
-    { src: TelegramIcon, alt: 'Telegram', url: '#' },
-    { src: InstagramIcon, alt: 'Instagram', url: '#' },
-    { src: FacebookIcon, alt: 'Facebook', url: '#' },
-    { src: LinkedInIcon, alt: 'LinkedIn', url: '#' },
-    { src: WhatsAppIcon, alt: 'WhatsApp', url: '#' },
-    { src: GitHubIcon, alt: 'GitHub', url: '#' },
+    { src: TelegramIcon, alt: 'Telegram', url: 'https://t.me/workpaulM' },
+    { src: InstagramIcon, alt: 'Instagram', url: 'https://www.instagram.com/magbanuapauljhon/' },
+    { src: FacebookIcon, alt: 'Facebook', url: 'https://www.facebook.com/Pmagbanua01' },
+    { src: LinkedInIcon, alt: 'LinkedIn', url: 'https://ph.linkedin.com/in/paul-jhon-magbanua-51a46527b' },
+    { src: WhatsAppIcon, alt: 'WhatsApp', url: '+63 995 822 2528' },
+    { src: GitHubIcon, alt: 'GitHub', url: 'https://github.com/peps778' },
 ]
 
 

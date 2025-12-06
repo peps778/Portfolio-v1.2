@@ -53,7 +53,7 @@ function NavigationBar() {
 
       {/* MOBILE MENU DROPDOWN */}
       {open && (
-        <div className="md:hidden bg-primary text-white rounded-3xl mt-2 w-[90%] mx-auto px-6 py-4 text-xl space-y-4 sticky top-25">
+        <div className="md:hidden bg-primary text-white rounded-3xl mt-2 w-[90%] mx-auto px-6 py-4 text-xl space-y-4 sticky top-25 z-100">
           <a className="block hover:text-green" href="/" onClick={() => setOpen(false)}>
             Home
           </a>
