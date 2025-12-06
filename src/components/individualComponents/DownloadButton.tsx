@@ -46,7 +46,7 @@ export default function DownloadButton({ pdfUrl = './MAGBANUA_PAUL_JHON_CV.pdf',
     <button
       onClick={handleDownload}
       disabled={loading} 
-      className="bg-whiteBackground border-2 border-black rounded-4xl py-2 px-7 hover:border-green font-primary text-green flex items-center justify-center gap-2 mx-auto"
+      className="bg-whiteBackground border-2 border-green rounded-4xl py-2 px-7 font-primary text-green flex items-center justify-center gap-2 mx-auto duration-300 ease-in-out transition-colors hover:bg-green hover:text-white hover:scale-110"
     >
       {/* Spinner Animation */}
       {loading && (
