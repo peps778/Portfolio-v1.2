@@ -5,7 +5,7 @@ interface DownloadButtonProps {
   fileName?: string; 
 }
 
-export default function DownloadButton({ pdfUrl = './MAGBANUA, PAUL JHON - CV.pdf', fileName = 'Paul Jhon Magbanua | CV.pdf' }: DownloadButtonProps) {
+export default function DownloadButton({ pdfUrl = './MAGBANUA_PAUL_JHON_CV.pdf', fileName = 'Paul Jhon Magbanua | CV.pdf' }: DownloadButtonProps) {
   const [loading, setLoading] = useState(false);
 
   const handleDownload = async () => {

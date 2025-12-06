@@ -29,7 +29,7 @@ function HeroSection() {
                 {/* <button id='downloadCV' className="bg-whiteBackground border-2 border-black rounded-4xl py-2 px-7 hover:border-green font-primary  text-green">
                     Download My CV!
                 </button> */}
-                <DownloadButton pdfUrl="public/documents/MAGBANUA, PAUL JHON - CV.pdf"/>
+                <DownloadButton pdfUrl="/documents/MAGBANUA_PAUL_JHON_CV.pdf"/>
             </div>
         </div>
   

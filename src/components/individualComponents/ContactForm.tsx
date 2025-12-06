@@ -1,10 +1,26 @@
 import { useFormStatus } from "react-dom"
+import React, { useRef, useEffect } from 'react';
+import Swal from "sweetalert2";
+
 
 export default function ContactForm() {
     const inputVariables = "bg-353846 border border-white rounded-2xl px-4 py-2 w-full focus:border-green focus:border-2";
 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault(); 
+
+        Swal.fire({
+            title: 'Form is under development!',
+            text: "Get back soon 😊",
+            icon: "info",
+            confirmButtonText: "OK",
+            confirmButtonColor: "#36DE55",
+        })
+
+    };
+
     return (
-        <form className="bg-black text-white rounded-2xl mt-15 px-6 py-6 w-[90%] max-w-md lg:mr-70 md:ml-10 sm:justify-self-center order-2 sm:order-1 max-sm:order-1 lg:order-2">
+        <form onSubmit={handleSubmit} className="bg-black text-white rounded-2xl mt-15 px-6 py-6 w-[90%] max-w-md lg:mr-70 md:ml-10 sm:justify-self-center order-2 sm:order-1 max-sm:order-1 lg:order-2">
             <h1 className="text-green text-header text-center font-bold font-primary">
                 Contact Me!
             </h1>
@@ -36,6 +52,7 @@ export default function ContactForm() {
 
             {/* Button */}
             <button
+                id="formSubmit"
                 type="submit"
                 className="mt-6 w-full bg-green border-2 border-white rounded-2xl py-2 font-semibold font-secondary">
                 Let's Connect
@@ -43,3 +60,6 @@ export default function ContactForm() {
         </form>
     )
 }
+
+
+

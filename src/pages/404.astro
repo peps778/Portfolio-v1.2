@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import FooterSection from "../components/FooterSection"
+import PagenotFound from "../components/404"
+
+const title = 'Paul Jhon Magbanua | 404 Page not found'
+---
+
+<BaseLayout title={title}>
+    <PagenotFound client:visible />
+    <FooterSection client:load/>
+</BaseLayout>
