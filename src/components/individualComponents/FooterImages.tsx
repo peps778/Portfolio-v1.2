@@ -1,9 +1,9 @@
-const TelegramIcon = './images/telegram-icon.png';
-const InstagramIcon = './images/instagram-icon.png';
-const FacebookIcon = './images/facebook-icon.png';
-const LinkedInIcon = './images/linkedin-icon.png';
-const WhatsAppIcon = './images/whatsapp-icon.png';
-const GitHubIcon = './images/github-icon.png';
+const TelegramIcon = '../images/telegram-icon.png';
+const InstagramIcon = '../images/instagram-icon.png';
+const FacebookIcon = '../images/facebook-icon.png';
+const LinkedInIcon = '../images/linkedin-icon.png';
+const WhatsAppIcon = '../images/whatsapp-icon.png';
+const GitHubIcon = '../images/github-icon.png';
 
 const socialIcons = [
     { src: TelegramIcon, alt: 'Telegram', url: 'https://t.me/workpaulM' },

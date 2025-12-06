@@ -1,29 +1,31 @@
 ---
-const { title = "Paul Jhon Magbanua | Front-End Developer" } = Astro.props;
+const { title } = Astro.props;
 const description = "I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, automation, and CRM management (GoHighLevel). I deliver efficient, creative, and results-driven digital solutions.";
 const url = "https://magbanua-pauljhon.website/";
-const openGraph = '/images/OpenGraph_PaulMagbanua.png'
+const openGraph = '/images/OpenGraph_PaulMagbanua.png';
 ---
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home | Paul Jhon Magbanua</title>
-<meta name="description" content="I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, automation, and CRM management (GoHighLevel). I deliver efficient, creative, and results-driven digital solutions.">
-<meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Home | Paul Jhon Magbanua">
-<meta property="og:description" content="I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, automation, and CRM management (GoHighLevel). I deliver efficient, creative, and results-driven digital solutions.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://magbanua-pauljhon.website/">
-<meta property="og:image" content="/images/OpenGraph_PaulMagbanua.png">
+  <!-- Dynamic Title -->
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="robots" content="index, follow">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Home | Paul Jhon Magbanua">
-<meta name="twitter:description" content="I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, automation, and CRM management (GoHighLevel). I deliver efficient, creative, and results-driven digital solutions.">
-<meta name="twitter:image" content="/images/OpenGraph_PaulMagbanua.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={url}>
+  <meta property="og:image" content={openGraph}>
 
-<link rel="canonical" href="https://magbanua-pauljhon.website/">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={openGraph}>
+
+  <link rel="canonical" href={url}>
 </head>
