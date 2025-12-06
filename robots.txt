@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+# Sitemap(s)
+Sitemap: https://magbanua-pauljhon.website/sitemap.xml
+
