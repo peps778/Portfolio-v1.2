@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up .9s ease-out both;
+  }
+
+  @keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in .9s ease-in;
+  }
+}
+
+
 @theme {
     --color-primary: #020618;
     --color-green: #36DE55;
@@ -38,6 +70,7 @@ html {
     scroll-behavior: smooth;
     font-size: 14px;
 }
+
 
 
 

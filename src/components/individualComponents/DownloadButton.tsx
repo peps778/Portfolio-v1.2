@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
+
 
 interface DownloadButtonProps {
   pdfUrl: string; 
@@ -43,10 +45,10 @@ export default function DownloadButton({ pdfUrl = './MAGBANUA_PAUL_JHON_CV.pdf',
   };
 
   return (
-    <button
+    <motion.button whileHover={{ scale: 1.1 }}
       onClick={handleDownload}
       disabled={loading} 
-      className="bg-whiteBackground border-2 border-green rounded-4xl py-2 px-7 font-primary text-green flex items-center justify-center gap-2 mx-auto duration-300 ease-in-out transition-colors hover:bg-green hover:text-white hover:scale-110"
+      className="bg-whiteBackground border-2 border-green rounded-4xl py-2 px-7 font-primary text-green flex items-center justify-center gap-2 mx-auto duration-300 ease-in-out transition-colors"
     >
       {/* Spinner Animation */}
       {loading && (
@@ -56,6 +58,6 @@ export default function DownloadButton({ pdfUrl = './MAGBANUA_PAUL_JHON_CV.pdf',
       
       {/* Button Text changes based on loading state */}
       {loading ? 'Downloading...' : 'Download My CV!'}
-    </button>
+    </motion.button>
   );
 }

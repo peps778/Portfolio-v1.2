@@ -1,26 +1,35 @@
 import type { loadApp } from "astro/app/node";
 import DownloadButton from "../components/individualComponents/DownloadButton"
+import { motion } from "framer-motion";
+import { h1 } from "motion/react-client";
+
 
 const heroImageSrc = '../images/PAUL_JHON_MAGBANUA.png'
 const spanVariables = 'text-green';
+const textAnimation = motion.create(h1);
 
 function HeroSection() {
+
     return (
+        
         <section id="home">
         <div id="textAndSubText" className="font-poppins text-center">
-            <h1 className="lg:text-hero sm:px-2 sm:text-mobileHeadline font-primary font-bold lg:mt-15 sm:mt-7 mb-15 ">
+            <motion.h1   initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: false }}   className=" lg:text-hero sm:px-2 sm:text-mobileHeadline font-primary font-bold lg:mt-15 sm:mt-7 mb-15 ">
                 Helping your brand succeed online <br /> with <span className={spanVariables}>Web Development</span> and <br /> <span className={spanVariables}>Creative Digital Solutions.</span>
-            </h1>
+            </motion.h1>
 
-            <p className="bg-primary border-3 font-secondary border-green lg:text-largeParagraph text-colorForText px-7 py-4 w-fit justify-self-center rounded-full">
+            <p className=" bg-primary border-3 font-secondary border-green lg:text-largeParagraph text-colorForText px-7 py-4 w-fit justify-self-center rounded-full">
                 Showcasing work that delivers results.
             </p>
         </div>
 
         {/* Another container */}
-        <div id="imageAndText" className=" w-fit gap-10 p-15 flex justify-center justify-self-center pb-20 sm:flex-col">
+        <div id="imageAndText" className=" w-fit gap-10 p-15 flex justify-center justify-self-center pb-20 lg:flex">
             <div id="imageSection">
-                <img className="hover:scale-110 sm:mx-auto" src={heroImageSrc} alt="Paul Jhon Magbanua's Home Page Image" />
+                <img className=" sm:mx-auto" src={heroImageSrc} alt="Paul Jhon Magbanua's Home Page Image" />
             </div>
 
             <div id="textSection" className="flex-col content-center text-center">
