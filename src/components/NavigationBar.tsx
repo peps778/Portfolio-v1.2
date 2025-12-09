@@ -10,7 +10,7 @@ const textHover =
   'hover:scale-110 transform transition duration-300 ease-in-out hover:text-green';
 
 const buttonHover =
-  'py-1 px-6 bg-green rounded-full border border-white hover:bg-green-400 hover:scale-110 transform transition duration-300 ease-in-out';
+  'py-1 px-6 bg-transparent rounded-full border-2 border-green text-green hover:bg-green hover:text-white hover:border-white hover:scale-110 transform transition duration-300 ease-in-out';
 
 function NavigationBar() {
   const [open, setOpen] = useState(false);

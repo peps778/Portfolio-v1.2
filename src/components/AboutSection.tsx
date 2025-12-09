@@ -16,7 +16,7 @@ function  AboutSection() {
 
                 <p className="text-smallParagraph sm:text-mobileParagraph mb-10 text-green"><i>Watch the video to learn more!</i></p>
                 <video src={videoSource} controls className={videoStyle}></video>
-                <button className=" text-white bg-green px-10 py-2 text-largeParagraph rounded-full border-2 border-white font-bold mt-10 hover:scale-110 hover:bg-primary hover:text-green hover:border-green sm:text-mobileParagraph font-secondary"><a href="/Calendar">Book A Call!</a></button>
+                <button className=" hover:text-white bg-transparent px-10 py-2 text-largeParagraph rounded-full border-2 border-green font-bold mt-10 hover:scale-110 hover:bg-green text-green hover:border-white sm:text-mobileParagraph font-secondary"><a href="/Calendar">Book A Call!</a></button>
             </section>
     )
 }

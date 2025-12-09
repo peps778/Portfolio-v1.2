@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @layer utilities {
+  
   @keyframes fade-up {
     from {
       opacity: 0;
@@ -29,6 +30,23 @@
   .animate-fade-in {
     animation: fade-in .9s ease-in;
   }
+
+  @keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.loader-border {
+  border: 2px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+}
+
 }
 
 
