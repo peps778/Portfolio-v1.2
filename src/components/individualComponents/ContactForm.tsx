@@ -34,12 +34,12 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (isSubmitting) return; // prevent double submit
+    if (isSubmitting) return; 
 
-    setIsSubmitting(true); // start loader
+    setIsSubmitting(true); 
 
     try {
-      const res = await fetch("/.netlify/functions/send_email", {
+      const res = await fetch("/.netlify/functions/contact_form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -54,18 +54,18 @@ export default function ContactForm() {
       }
 
       const data = await res.json();
-      Swal.fire("Success", "Your message was sent!", "success");
       setForm({
         fullName: "",
         email: "",
         phone: "",
         checkbox: false,
-      }); // reset form
+      }); 
+      window.location.href = "/Thankyou";
     } catch (err: any) {
       console.error("Fetch error:", err.message || err);
       Swal.fire("Error", "Failed to send message", "error");
     } finally {
-      setIsSubmitting(false); // stop loader
+      setIsSubmitting(false); 
     }
   };
 
