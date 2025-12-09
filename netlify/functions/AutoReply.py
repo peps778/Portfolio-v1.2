@@ -11,6 +11,16 @@ load_dotenv()
 EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
+def handler(event, context):
+    data = json.loads(event["body"])
+    print("Form submission received:", data)
+    return {
+        "statusCode": 200,
+        "body": json.dumps({"message": "Function works!"})
+    }
+
+
+
 def send_email(to_email, subject, body):
     print(f"Sending email to: {to_email}")  # DEBUG
     msg = MIMEMultipart()

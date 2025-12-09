@@ -65,11 +65,6 @@ export default function ContactForm() {
     }
   };
 
-
-
-
-
-
     return (
         <form onSubmit={handleSubmit} className="bg-black text-white rounded-2xl mt-15 px-6 py-6 w-[90%] max-w-md lg:mr-70 md:ml-10 sm:justify-self-center order-2 sm:order-1 max-sm:order-1 lg:order-2">
             <h1 className="text-green text-header text-center font-bold font-primary">

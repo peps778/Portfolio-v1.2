@@ -4,3 +4,7 @@
 
 [functions."AutoReply"]
   runtime = "python3.9"
+
+[dev]
+  functions = "netlify/functions"
+
