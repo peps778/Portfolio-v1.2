@@ -60,7 +60,7 @@ export default function ContactForm() {
         phone: "",
         checkbox: false,
       }); 
-      window.location.href = "/Thankyou";
+      window.location.href = "/thank-you";
     } catch (err: any) {
       console.error("Fetch error:", err.message || err);
       Swal.fire("Error", "Failed to send message", "error");
@@ -162,7 +162,7 @@ export default function ContactForm() {
         )}
       </button>
 
-      <p className="mt-5 text-sm text-green justify-self-center"><a className="underline hover:text-blue-500" href="/privacy-policy">Privacy Policy</a> | <a className="underline hover:text-blue-500" href="/terms-and-conditions">Terms and Conditions</a></p>
+      <p className="mt-5 text-sm text-green justify-self-center"><a className="underline hover:text-blue-500" href="/terms-and-conditions">Terms and Conditions</a> | <a className="underline hover:text-blue-500" href="/privacy-policy">Privacy Policy</a></p>
     </form>
   );
 }

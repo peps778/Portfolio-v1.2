@@ -1,3 +1,5 @@
+import FooterSection from "./FooterSection";
+
 export default function PrivacyPolicy() {
   const sections = [
     {
@@ -39,6 +41,8 @@ export default function PrivacyPolicy() {
   ];
 
   return (
+    <>
+   
     <div className="bg-primary border-4 border-green mx-auto max-w-5xl w-full my-10 lg:my-20 px-5 sm:px-10 lg:px-20 py-10 text-justify text-white rounded-2xl">
 
       {/* Header */}
@@ -79,5 +83,7 @@ export default function PrivacyPolicy() {
         </a>
       </div>
     </div>
+    <FooterSection/>
+     </>
   );
 }
