@@ -12,8 +12,7 @@ export default function ContactForm() {
     checkbox: false,
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false); // ← loader state
-
+  const [isSubmitting, setIsSubmitting] = useState(false); 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -39,7 +38,7 @@ export default function ContactForm() {
     setIsSubmitting(true); 
 
     try {
-      const res = await fetch("/.netlify/functions/contact_form", {
+      const res = await fetch("/.netlify/functions/sendToMake", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
