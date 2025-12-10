@@ -1,11 +1,20 @@
 import nodemailer from "nodemailer";
 
 export async function handler(event, context) {
+  console.log("📩 Function triggered!");
+  console.log("HTTP Method:", event.httpMethod);
+  console.log("Raw event.body:", event.body);
+
   try {
-    const data = JSON.parse(event.body);
+    // Parse incoming request
+    const data = JSON.parse(event.body || "{}");
+    console.log("Parsed Data:", data);
+
     const { email } = data;
+    console.log("Extracted email:", email);
 
     if (!email) {
+      console.log("❌ No email found in data.");
       return {
         statusCode: 400,
         body: JSON.stringify({ error: "Email is required" }),
@@ -13,6 +22,7 @@ export async function handler(event, context) {
     }
 
     // Create transporter
+    console.log("🔧 Creating Nodemailer transporter...");
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -20,69 +30,47 @@ export async function handler(event, context) {
         pass: process.env.EMAIL_PASSWORD,
       },
     });
+
+    console.log("🚀 Transporter created. Attempting to send email to:", email);
+
     // Auto-reply to user
     await transporter.sendMail({
       from: process.env.EMAIL_ADDRESS,
       to: email,
       subject: "Hi There!",
       html: `
-    <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 20px;">
-        
-        
+        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 20px;">
+            <h2 style="color:#222; font-weight:600;">Thanks for Reaching Out!</h2>
+            <p>Hi there, thank you for submitting your email.</p>
+            <div style="margin: 25px 0; text-align:center;">
+              <a 
+                href="https://cal.com/paul-jhon-magbanua/30min-discussion"
+                style="
+                  background:#36DE55;
+                  color:#fff;
+                  padding:12px 22px;
+                  border-radius:6px;
+                  text-decoration:none;
+                  font-size:16px;
+                "
+              >
+                Schedule Your 30-Min Call
+              </a>
+            </div>
 
-        <h2 style="color:#222; font-weight:600;">Thanks for Reaching Out!</h2>
-
-        <p>
-          Hi there, and thank you for submitting your email. I appreciate your interest
-          in connecting with me.
-        </p>
-
-        <p>
-          To move forward, please schedule a quick call at your convenience. This helps ensure 
-          we align on your goals and give you the support you need.
-        </p>
-
-        <div style="margin: 25px 0; text-align:center;">
-          <a 
-            href="https://cal.com/paul-jhon-magbanua/30min-discussion"
-            style="
-              background:#36DE55;
-              color:#fff;
-              padding:12px 22px;
-              border-radius:6px;
-              text-decoration:none;
-              font-size:16px;
-              border: 1px solid white;
-              display:inline-block;
-            "
-          >
-            Schedule Your 30-Min Call
-          </a>
+            <div style="text-align:center; margin-bottom: 25px;">
+              <img 
+                src="https://magbanua-pauljhon.website/images/OpenGraph_PaulMagbanua.png"
+                alt="Paul Jhon Magbanua" 
+                style="width: 60vw; height:auto;"
+              />
+            </div>
+            <p><strong>Paul Jhon Magbanua</strong></p>
         </div>
-
-        <p>
-          If you have any questions before our call, feel free to reply directly to this email.
-        </p>
-        <br>
-      <div style="text-align:center; margin-bottom: 25px;">
-          <img 
-            src="https://magbanua-pauljhon.website/images/OpenGraph_PaulMagbanua.png"
-            alt="Paul Jhon Magbanua" 
-            style="width: 60vw; height:auto; margin: 0 20px"
-          />
-        </div>
-        <br>
-
-        <p style="font-weight:600; margin:0;">Best regards,</p>
-        <p style="margin:0;">
-          <strong>Paul Jhon Magbanua</strong><br>
-          Front-End Developer | Digital Marketing | Creative Content Specialist
-        </p>
-
-
-    
-  `,
+      `,
     });
+
+    console.log("📨 Auto-reply sent to:", email);
 
     // Notification to yourself
     await transporter.sendMail({
@@ -95,12 +83,16 @@ export async function handler(event, context) {
       `,
     });
 
+    console.log("📨 Notification email sent to yourself.");
+
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Emails sent successfully!" }),
     };
+
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("❌ Error sending email:", error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),
