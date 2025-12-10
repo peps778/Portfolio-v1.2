@@ -91,7 +91,7 @@ export default function FooterSection() {
         </div>
 
         <div className="flex-1 md:flex-2 lg:ml-20 sm:text-center lg:text-left">
-          <h1 className="lg:text-header mb-1 font-bold text-green font-primary">Contact Information:</h1>
+          <h1 className="lg:text-header mb-1 font-bold text-green font-primary sm:text-mobileHero">Contact Information:</h1>
           <p className={footerVariables}>work.paulmagbanua@gmail.com</p>
           <p className={footerVariables}>+63 9958222528</p>
           <p className={footerVariables}>Philippines</p>
@@ -109,6 +109,7 @@ export function FooterText() {
   return (
     <div className='w-full bg-bottomFooter text-center text-[#C1C3C7] lg:py-6 lg:mt-20 sm:py-6 sm:mt-10 sm:px-10 font-secondary'>
       <p>© 2025 All Rights Reserved. <br /> Front-End Development • Digital Marketing • Creative Content Production</p>
+      <p className="mt-5 text-sm text-green justify-self-center"><a className="underline hover:text-blue-500" href="/privacy-policy">Privacy Policy</a> | <a className="underline hover:text-blue-500" href="/terms-and-conditions">Terms and Conditions</a></p>
     </div>
   );
 }

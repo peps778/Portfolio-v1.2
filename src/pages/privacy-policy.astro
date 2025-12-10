@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Privacy from "../components/PrivacyPolicy";
+import FooterSection from "../components/FooterSection";
+const title = 'Privacy Policy | Paul Jhon Magbanua    '
+
+---
+
+<BaseLayout title={title}>
+    <Privacy client:visible>
+    <FooterSection client:visible />
+</BaseLayout>

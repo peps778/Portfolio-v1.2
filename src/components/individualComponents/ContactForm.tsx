@@ -126,7 +126,7 @@ export default function ContactForm() {
       />
 
       {/* Consent */}
-      <div className="flex items-start gap-2 mt-4">
+      <div className="flex items-start gap-2 mt-5 ml-2">
         <input
           type="checkbox"
           name="checkbox"
@@ -161,6 +161,8 @@ export default function ContactForm() {
           "Let's Connect"
         )}
       </button>
+
+      <p className="mt-5 text-sm text-green justify-self-center"><a className="underline hover:text-blue-500" href="/privacy-policy">Privacy Policy</a> | <a className="underline hover:text-blue-500" href="/terms-and-conditions">Terms and Conditions</a></p>
     </form>
   );
 }

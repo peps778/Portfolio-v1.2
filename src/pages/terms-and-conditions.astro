@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FooterSection from "../components/FooterSection";
+import Terms from "../components/TermsAndConditions";
+const title = 'Terms and Conditions | Paul Jhon Magbanua'
+
+
+---
+
+<BaseLayout title={title}>
+    <Terms client:visible />
+    <FooterSection client:visible/> 
+</BaseLayout>

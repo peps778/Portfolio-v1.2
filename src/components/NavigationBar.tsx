@@ -40,7 +40,7 @@ function NavigationBar() {
           </li>
           <li>
             <button className={buttonHover}>
-              <a href="/Contact">Contact</a>
+              <a href="/contact">Contact</a>
             </button>
           </li>
         </ul>
@@ -70,7 +70,7 @@ function NavigationBar() {
             Education
           </a>
           <button className={`${buttonHover} w-full`} onClick={() => setOpen(false)}>
-            <a href="/Contact">Contact</a>
+            <a href="/contact">Contact</a>
           </button>
         </div>
       )}
