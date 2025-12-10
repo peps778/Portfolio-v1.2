@@ -49,3 +49,18 @@ import FooterSection from '../components/FooterSection';
   window.addEventListener("load", attachObserver);
   setTimeout(attachObserver, 500);
 </script>
+<script>
+console.time("Page Load");
+window.addEventListener("load", () => {
+  console.timeEnd("Page Load");
+  console.log("✅ Page fully loaded");
+});
+
+window.addEventListener("error", (e) => {
+  console.error("❌ Error caught:", e.message, e.filename, e.lineno, e.colno);
+});
+
+window.addEventListener("unhandledrejection", (e) => {
+  console.error("❌ Promise Rejection:", e.reason);
+});
+</script>
