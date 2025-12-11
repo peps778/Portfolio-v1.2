@@ -49,36 +49,49 @@ export async function handler(event) {
       to: email,
       subject: "Hello " + fullName + "! 👋",
       html: `
-        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 20px;">
-            <h2 style="color:#222; font-weight:600;">Thanks for Reaching Out, ${fullName}!</h2>
-            <p>This is your follow-up email sent automatically after 10 minutes.</p>
+        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 30px; background-color:#f9f9f9; max-width:600px; margin:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+  
+  <h2 style="color:#222; font-weight:700; font-size:24px; margin-bottom:15px;">
+    Thank You for Reaching Out, ${fullName}!
+  </h2>
+  
+  <p style="font-size:16px; margin-bottom:20px;">
+    I truly appreciate you taking the time to get in touch. To ensure we stay aligned with your interests and projects, I invite you to schedule a 30-minute call at your convenience. This will help us discuss your goals and next steps effectively.
+  </p>
 
-            <div style="margin: 25px 0; text-align:center;">
-              <a 
-                href="https://cal.com/paul-jhon-magbanua/30min-discussion"
-                style="
-                  background:#36DE55;
-                  color:#fff;
-                  padding:12px 22px;
-                  border-radius:6px;
-                  text-decoration:none;
-                  font-size:16px;
-                "
-              >
-                Schedule Your 30-Min Call
-              </a>
-            </div>
+  <div style="margin:30px 0; text-align:center;">
+    <a 
+      href="https://cal.com/paul-jhon-magbanua/30min-discussion"
+      style="
+        background:#36DE55;
+        color:#fff;
+        padding:14px 26px;
+        border-radius:6px;
+        text-decoration:none;
+        font-size:16px;
+        font-weight:600;
+        display:inline-block;
+      "
+    >
+      Schedule Your 30-Min Call
+    </a>
+  </div>
 
-            <div style="text-align:center; margin-bottom: 25px;">
-              <img 
-                src="https://magbanua-pauljhon.website/images/OpenGraph_PaulMagbanua.png"
-                alt="Paul Jhon Magbanua" 
-                style="width: 60vw; height:auto;"
-              />
-            </div>
+  <div style="text-align:center; margin-bottom:25px;">
+    <img 
+      src="https://magbanua-pauljhon.website/images/OpenGraph_PaulMagbanua.png"
+      alt="Paul Jhon Magbanua"
+      style="width:60%; max-width:300px; height:auto; border-radius:8px;"
+    />
+  </div>
 
-            <p><strong>Paul Jhon Magbanua</strong></p>
-        </div>
+  <p style="font-size:16px; margin-top:20px;">
+    Best regards,<br>
+    <strong>Paul Jhon Magbanua</strong>
+  </p>
+
+</div>
+
       `,
     });
 
