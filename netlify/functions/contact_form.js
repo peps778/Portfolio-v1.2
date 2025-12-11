@@ -49,7 +49,7 @@ export async function handler(event) {
       to: email,
       subject: "Hello " + fullName + "! 👋",
       html: `
-        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 30px; background-color:#020618; max-width:600px; margin:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 30px; background-color:#f4f4fe; max-width:600px; margin:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
 
   <style>
     /* Only works in webmail that supports <style> */
