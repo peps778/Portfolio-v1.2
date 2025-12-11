@@ -49,19 +49,27 @@ export async function handler(event) {
       to: email,
       subject: "Hello " + fullName + "! 👋",
       html: `
-        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 30px; background-color:#f9f9f9; max-width:600px; margin:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+        <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 30px; background-color:#020618; max-width:600px; margin:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+
+  <style>
+    /* Only works in webmail that supports <style> */
+    .btn:hover {
+      background-color: #28a745 !important; /* Slightly darker green */
+    }
+  </style>
   
-  <h2 style="color:#222; font-weight:700; font-size:24px; margin-bottom:15px;">
+  <h2 style="color:#222; font-weight:700; font-size:24px; margin-bottom:15px; text-align: center">
     Thank You for Reaching Out, ${fullName}!
   </h2>
   
-  <p style="font-size:16px; margin-bottom:20px;">
+  <p style="font-size:16px; margin-bottom:20px; text-align: justify;">
     I truly appreciate you taking the time to get in touch. To ensure we stay aligned with your interests and projects, I invite you to schedule a 30-minute call at your convenience. This will help us discuss your goals and next steps effectively.
   </p>
 
   <div style="margin:30px 0; text-align:center;">
     <a 
       href="https://cal.com/paul-jhon-magbanua/30min-discussion"
+      class="btn"
       style="
         background:#36DE55;
         color:#fff;
@@ -71,6 +79,7 @@ export async function handler(event) {
         font-size:16px;
         font-weight:600;
         display:inline-block;
+        transition: background 0.3s ease;
       "
     >
       Schedule Your 30-Min Call
@@ -87,7 +96,9 @@ export async function handler(event) {
 
   <p style="font-size:16px; margin-top:20px;">
     Best regards,<br>
-    <strong>Paul Jhon Magbanua</strong>
+    <strong>Paul Jhon Magbanua</strong> <br>
+    Front-End Developer | Digital Marketing |
+Creative Content Specialist
   </p>
 
 </div>
