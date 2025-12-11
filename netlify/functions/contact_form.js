@@ -1,27 +1,37 @@
 import nodemailer from "nodemailer";
 
-export async function handler(event, context) {
-  console.log("📩 Function triggered!");
+export async function handler(event) {
+  console.log("📩 Function triggered by MAKE!");
   console.log("HTTP Method:", event.httpMethod);
-  console.log("Raw event.body:", event.body);
+  console.log("Raw body:", event.body);
 
   try {
-    // Parse incoming request
-    const data = JSON.parse(event.body || "{}");
-    console.log("Parsed Data:", data);
-
-    const { email } = data;
-    console.log("Extracted email:", email);
-
-    if (!email) {
-      console.log("❌ No email found in data.");
+    // Only accept POST
+    if (event.httpMethod !== "POST") {
       return {
-        statusCode: 400,
-        body: JSON.stringify({ error: "Email is required" }),
+        statusCode: 405,
+        body: JSON.stringify({ error: "Method Not Allowed" }),
       };
     }
 
-    // Create transporter
+    // Parse incoming JSON from Make
+    const data = JSON.parse(event.body || "{}");
+    console.log("Parsed data from Make:", data);
+
+    const { email, fullName } = data;
+
+    if (!email || !fullName) {
+      console.log("❌ Missing required fields.");
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Email and fullName are required." }),
+      };
+    }
+
+    console.log("Extracted email:", email);
+    console.log("Extracted fullName:", fullName);
+
+    // Create email transporter
     console.log("🔧 Creating Nodemailer transporter...");
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -31,17 +41,18 @@ export async function handler(event, context) {
       },
     });
 
-    console.log("🚀 Transporter created. Attempting to send email to:", email);
+    console.log("🚀 Transporter ready. Sending follow-up email to:", email);
 
-    // Auto-reply to user
+    // Send email to the user
     await transporter.sendMail({
       from: process.env.EMAIL_ADDRESS,
       to: email,
-      subject: "Hi There!",
+      subject: "Hello " + fullName + "! 👋",
       html: `
         <div style="font-family: Poppins, sans-serif; color:#333; line-height:1.6; padding: 20px;">
-            <h2 style="color:#222; font-weight:600;">Thanks for Reaching Out!</h2>
-            <p>Hi there, thank you for submitting your email.</p>
+            <h2 style="color:#222; font-weight:600;">Thanks for Reaching Out, ${fullName}!</h2>
+            <p>This is your follow-up email sent automatically after 10 minutes.</p>
+
             <div style="margin: 25px 0; text-align:center;">
               <a 
                 href="https://cal.com/paul-jhon-magbanua/30min-discussion"
@@ -65,33 +76,38 @@ export async function handler(event, context) {
                 style="width: 60vw; height:auto;"
               />
             </div>
+
             <p><strong>Paul Jhon Magbanua</strong></p>
         </div>
       `,
     });
 
-    console.log("📨 Auto-reply sent to:", email);
+    console.log(`📨 Follow-up email sent to user: ${email}`);
 
-    // Notification to yourself
+    // Send notification to yourself
     await transporter.sendMail({
       from: process.env.EMAIL_ADDRESS,
       to: process.env.EMAIL_ADDRESS,
-      subject: `New Contact Form Submission from ${email}`,
+      subject: `New delayed follow-up sent to: ${email}`,
       html: `
-        <h3>New Lead Submission:</h3>
+        <h3>New Follow-up Triggered</h3>
+        <p><strong>Name:</strong> ${fullName}</p>
         <p><strong>Email:</strong> ${email}</p>
       `,
     });
 
-    console.log("📨 Notification email sent to yourself.");
+    console.log("📨 Notification email sent to you.");
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Emails sent successfully!" }),
+      body: JSON.stringify({
+        message: "Emails sent successfully!",
+        received: { email, fullName },
+      }),
     };
 
   } catch (error) {
-    console.error("❌ Error sending email:", error);
+    console.error("❌ Error in follow-up function:", error);
 
     return {
       statusCode: 500,
