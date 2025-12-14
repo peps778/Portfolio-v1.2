@@ -4,7 +4,7 @@ const Logo = '../images/Paul_Jhon_Magbanua_Logo-white.png';
 
 // Tailwind Variables
 const NavBarVariables =
-  'bg-primary font-poppins p-2 flex justify-between items-center mt-5 w-[95%] max-w-6xl mx-auto rounded-4xl px-13 sticky top-4 z-10 sm:sticky sm:top-5 lg:text-1xl md:text-xl sm:text-2xl';
+  'bg-primary font-poppins p-2 flex justify-between items-center mt-5 w-[95%] max-sm:w-[90%] max-w-6xl mx-auto rounded-4xl px-13 sticky top-4 z-10 sm:sticky sm:top-5 lg:text-1xl md:text-xl sm:text-2xl max-sm:px-4 max-sm:py-1';
 
 const textHover =
   'hover:scale-110 transform transition duration-300 ease-in-out hover:text-green';
@@ -82,7 +82,7 @@ export default NavigationBar;
 
 export function NavImageName() {
   return(
-    <div id="LogoAndName" className="flex items-center gap-3">
+    <div id="LogoAndName" className="flex items-center gap-3 max-sm:gap-0">
         <a href="/">
               <img src={Logo} alt="Website logo of Paul Jhon Magbanua" className="h-14 md:h-16" />
         </a>

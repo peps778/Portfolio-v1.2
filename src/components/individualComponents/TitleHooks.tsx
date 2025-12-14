@@ -4,7 +4,7 @@ export default function useSectionTitle(sectionIds: string[]) {
   useEffect(() => {
     const options = {
       root: null,
-      threshold: 0.6, // 60% of section must be visible
+      threshold: 0.6, // 60% of section should be visible
     };
 
     const observer = new IntersectionObserver((entries) => {

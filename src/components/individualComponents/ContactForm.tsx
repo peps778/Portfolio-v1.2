@@ -38,10 +38,15 @@ export default function ContactForm() {
     setIsSubmitting(true); 
 
     try {
+      const payload = {
+      ...form,
+      checkbox: Boolean(form.checkbox),
+    };
+
       const res = await fetch("/.netlify/functions/sendToMake", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -132,7 +137,6 @@ export default function ContactForm() {
           className="scale-150 mt-1 ml-1 hover:border-green hover:border-2"
           onChange={handleChange}
           checked={form.checkbox}
-          required
         />
         <label
           htmlFor="checkbox"

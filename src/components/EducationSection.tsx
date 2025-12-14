@@ -1,3 +1,4 @@
+import { div } from 'motion/react-client';
 import { TitleSyle } from '../styles/GlobalStyles';
 const educationImage = '../images/education-icon.png'; 
 
@@ -6,18 +7,19 @@ type EducationEntryType = {
     degree: string;
     period: string;
     award?: string;
+    style?: string;
 }
 
-export function EducationEntry({ name, degree, period, award }: EducationEntryType) {
+export function EducationEntry({ name, degree, period, award, style}: EducationEntryType) {
     return (
         <>
-            <img className='col-span-1 sm:col-span-2 lg:ml-auto lg:mt-8 sm:ml-10' src={educationImage} alt="Education logo" />
+            <img className='col-span-1 sm:col-span-2 lg:ml-auto lg:mt-8 sm:hidden max-sm:hidden' src={educationImage} alt="Education logo" />
 
-            <div className='col-span-9 sm:col-span-8 lg:w-fit  sm:ml-10 sm:mt-10 sm:mx-10'>
+            <div className='col-span-9 sm:col-span-8 lg:w-fit sm:mt-10 sm:mx-10 max-sm:text-center'>
                 <h1 className='lg:text-header font-primary lg:mt-10 sm:text-2xl'>{name}</h1>
-                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{degree}</p>
-                {award && <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{award}</p>}  {/* Conditional rendering */}
-                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{period}</p>
+                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary '>{degree}</p>
+                {award && <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{award}</p>}
+                <p className={`lg:text-largeParagraph sm:text-mobileParagraph font-secondary ${style}`}>{period}</p>
             </div>
 
         </>
@@ -41,11 +43,12 @@ export default function EducationSection() {
             name: "Ramon Torres Louisiana National Highschool ", 
             degree: "Graduate of Junior Highschool",
             period: "2018-2022",
+            style: ""
         }, 
     ]
 
     return (
-        <section id="education" className='lg:mb-50 lg:mt-20 sm:mb-15 sm:mt-10'>
+        <section id="education" className='lg:mb-50 lg:mt-20 sm:mb-15 sm:mt-10 max-sm:pt-5'>
             <h1 className={TitleSyle}>Education</h1>
 
             <div className="bg-primary text-white grid grid-cols-10 gap-3 items-center align-start justify-self-center lg:px-20 lg:pb-10 lg:mx-10 align-items-center rounded-2xl sm:mx-10 border-3 border-green">
