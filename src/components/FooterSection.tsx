@@ -109,7 +109,7 @@ export function FooterText() {
   return (
     <div className='w-full bg-bottomFooter text-center text-[#C1C3C7] lg:py-6 lg:mt-20 sm:py-6 sm:mt-10 sm:px-10 font-secondary max-sm:pt-7 max-sm:pb-5'>
       <p className='max-sm:text-sm'>© 2025 All Rights Reserved. <br /> Front-End Development • Digital Marketing • Creative Content Production</p>
-      <p className="mt-5 text-sm text-green justify-self-center"><a className="underline hover:text-blue-500" href="/terms-and-conditions max-sm:text-sm">Terms and Conditions</a> | <a className="underline hover:text-blue-500" href="/privacy-policy">Privacy Policy</a></p>
+      <p className="mt-5 text-sm text-green justify-self-center"><a className="underline hover:text-blue-500" href="/terms-and-conditions">Terms and Conditions</a> | <a className="underline hover:text-blue-500" href="/privacy-policy">Privacy Policy</a></p>
     </div>
   );
 }
