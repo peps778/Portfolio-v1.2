@@ -7,10 +7,10 @@ export default function ExperienceSection() {
             <h1 className={TitleSyle}>Experience</h1>
 
             <WorkCard />
-                <p className='text-white sm:mx-20 my-20 lg:text-largeParagraph lg:w-300 md:w-300 sm:w-100 justify-self-center mx-10 font-secondary '>At NYX Virtual Solutions, I provide comprehensive remote support to ensure smooth daily operations for clients and internal teams. My role involves managing administrative tasks, coordinating communication, and maintaining workflow efficiency in a fast-paced work-from-home setup. I also contribute to frontend development tasks, assisting with UI updates, website fixes, and implementing small feature enhancements to improve user experience.</p>
+                <p className=' sm:mx-20 my-20 lg:text-largeParagraph lg:w-300 md:w-300 sm:w-100 justify-self-center mx-10 font-secondary text-colorForText'>At NYX Virtual Solutions, I provide comprehensive remote support to ensure smooth daily operations for clients and internal teams. My role involves managing administrative tasks, coordinating communication, and maintaining workflow efficiency in a fast-paced work-from-home setup. I also contribute to frontend development tasks, assisting with UI updates, website fixes, and implementing small feature enhancements to improve user experience.</p>
            
             
-            <div className='bg-transparent border border-green rounded-full px-10 w-fit mb-20 text-white text-center text-smallParagraph justify-self-center max-sm:mx-7 max-sm:text-sm max-sm:mb-3'>
+            <div className='bg-transparent border border-green rounded-full px-10 w-fit mb-20  text-center text-smallParagraph justify-self-center max-sm:mx-7 max-sm:text-sm max-sm:mb-3 text-colorForText'>
                 <p>Turning chaos into clarity—one task <br /> and one pixel at a time.</p>
             </div>
         </section>
@@ -28,9 +28,9 @@ export function WorkCard() {
         <img src={cardImage} alt="Company logo of Nyx Virtual Solution" className="w-40 lg:ml-10 md:ml-auto" />
     
         <div className=' sm:mx-auto lg:right-95 md:right-20'>
-            <h1 className="font-bold font-primary text-xl text-header max-sm:text-2xl max-sm:mt-5">NYX Virtual Solutions</h1>
-            <p className='font-secondary max-sm:text-sm'>Frontend Web Developer | Operations Support</p>
-            <p className='font-secondary italic max-sm:mt-3'>July 2024 - August 2025</p>
+            <h1 className="font-bold font-primary text-xl text-header max-sm:text-2xl max-sm:mt-5 text-colorForText">NYX Virtual Solutions</h1>
+            <p className='font-secondary max-sm:text-sm text-colorForText'>Frontend Web Developer | Operations Support</p>
+            <p className='font-secondary italic max-sm:mt-3 text-colorForText'>July 2024 - August 2025</p>
         </div>
     </article>  
 

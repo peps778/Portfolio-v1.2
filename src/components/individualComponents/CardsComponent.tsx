@@ -61,8 +61,8 @@ export default function CardList({ className = "" }: { className?: string }) {
 function CardComponent({ title, description, className = "" }: CardProps) {
   return (
     <div className={`bg-primary h-fit hover:scale-105 hover:bg-primary hover:text-white border-green hover:border-4 border-3 w-full sm:w-80 md:w-1/3 lg:w-1/4 p-4 rounded-2xl shadow-md ${className}`}>
-      <h1 className="text-largeParagraph font-primary font-bold mb-2 text-white max-sm:text-xl">{title}</h1>
-      <p className="mt-10 font-secondary text-smallParagraph text-white max-sm:text-lg">{description}</p>
+      <h1 className="text-largeParagraph font-primary font-bold mb-2 max-sm:text-xl text-colorForText">{title}</h1>
+      <p className="mt-10 font-secondary text-smallParagraph max-sm:text-lg text-colorForText">{description}</p>
     </div>
   );
 }

@@ -17,7 +17,7 @@ const socialIcons = [
 
  export default function CenterIcons() {
     return (
-        <div className="flex flex-col items-center mt-30">
+        <div className="flex flex-col items-center mt-30 max-sm:mt-10">
             <div className="flex justify-center items-center gap-3">
 
                 {socialIcons.map((icon, index) => (
@@ -31,7 +31,7 @@ const socialIcons = [
             <hr className="border-t border-white my-5 w-full max-w-xs" />
             
             
-            <p className="text-center text-white text-lg mt-0 mb-4 tracking-wider font-secondary">
+            <p className="text-center text-colorForText text-lg mt-0 mb-4 tracking-wider font-secondary max-sm:text-sm max-sm:pb-6">
                 Skilled • Collaborative • Detail Oriented
             </p>
         </div>

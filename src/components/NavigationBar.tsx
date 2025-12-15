@@ -4,7 +4,7 @@ const Logo = '../images/Paul_Jhon_Magbanua_Logo-white.png';
 
 // Tailwind Variables
 const NavBarVariables =
-  'bg-primary font-poppins p-2 flex justify-between items-center mt-5 w-[95%] max-sm:w-[90%] max-w-6xl mx-auto rounded-4xl px-13 sticky top-4 z-10 sm:sticky sm:top-5 lg:text-1xl md:text-xl sm:text-2xl max-sm:px-4 max-sm:py-1';
+  'bg-primary font-poppins p-2 flex justify-between items-center mt-5 w-[95%] max-sm:w-[90%] max-w-6xl mx-auto rounded-4xl px-13 sticky top-4 z-10 sm:sticky sm:top-5 lg:text-1xl md:text-xl sm:text-2xl max-sm:px-4 max-sm:py-1 border-3 border-green';
 
 const textHover =
   'hover:scale-110 transform transition duration-300 ease-in-out hover:text-green';

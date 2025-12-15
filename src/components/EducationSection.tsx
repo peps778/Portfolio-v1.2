@@ -7,20 +7,19 @@ type EducationEntryType = {
     degree: string;
     period: string;
     award?: string;
-    style?: string;
 }
 
-export function EducationEntry({ name, degree, period, award, style}: EducationEntryType) {
+export function EducationEntry({ name, degree, period, award, }: EducationEntryType) {
     return (
         <>
-            <img className='col-span-1 sm:col-span-2 lg:ml-auto lg:mt-8 sm:hidden max-sm:hidden' src={educationImage} alt="Education logo" />
+            <img className='col-span-1 sm:col-span-2 lg:ml-auto lg:mt-8 sm:hidden max-sm:hidden lg:visible' src={educationImage} alt="Education logo" />
 
-            <div className='col-span-9 sm:col-span-8 lg:w-fit sm:mt-10 sm:mx-10 max-sm:text-center'>
-                <h1 className='lg:text-header font-primary lg:mt-10 sm:text-2xl'>{name}</h1>
-                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary '>{degree}</p>
-                {award && <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary'>{award}</p>}
-                <p className={`lg:text-largeParagraph sm:text-mobileParagraph font-secondary ${style}`}>{period}</p>
-            </div>
+            <div className='col-span-9 sm:col-span-8 lg:w-fit sm:mt-10 sm:mx-10 max-sm:place-items-center max-sm:ml-7'>
+                <h1 className='lg:text-header font-primary lg:mt-10 sm:text-2xl max-sm:text-center  max-sm:text-lg text-green mt-2 font-bold'>{name}</h1>
+                <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary max-sm:text-center italic max-sm:text-sm text-gray-400'>{degree}</p>
+                {award && <p className='lg:text-largeParagraph sm:text-mobileParagraph font-secondary max-sm:text-center italic max-sm:text-sm text-gray-400'>{award}</p>}
+                 <p className={`lg:text-largeParagraph sm:text-mobileParagraph font-secondary italic max-sm:text-sm text-gray-400`} > {period} </p>          
+              </div>
 
         </>
     )
@@ -43,15 +42,14 @@ export default function EducationSection() {
             name: "Ramon Torres Louisiana National Highschool ", 
             degree: "Graduate of Junior Highschool",
             period: "2018-2022",
-            style: ""
         }, 
     ]
 
     return (
-        <section id="education" className='lg:mb-50 lg:mt-20 sm:mb-15 sm:mt-10 max-sm:pt-5'>
+        <section id="education" className='lg:mb-50 lg:mt-20 sm:mb-15 sm:mt-10 max-sm:pt-9'>
             <h1 className={TitleSyle}>Education</h1>
 
-            <div className="bg-primary text-white grid grid-cols-10 gap-3 items-center align-start justify-self-center lg:px-20 lg:pb-10 lg:mx-10 align-items-center rounded-2xl sm:mx-10 border-3 border-green">
+            <div className="bg-primary text-white grid grid-cols-10 gap-3 items-center align-start justify-self-center lg:px-20 lg:pb-10 lg:mx-10 align-items-center rounded-2xl sm:mx-10 border-3 border-green max-sm:py-6 max-sm:mx-5 max-sm:mb-10 max-sm:px-0.5">
                 {educationData.map((edu, index) => (
                     <EducationEntry key={index} name={edu.name} degree={edu.degree} period={edu.period} award={edu.award} />
                 ))}

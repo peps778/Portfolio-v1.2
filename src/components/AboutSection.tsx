@@ -12,7 +12,7 @@ function  AboutSection() {
         
             <section id="about" className="bg-black text-center pt-10 pb-35 sm:pb-20 max-sm:pb-15 ">
                 <h1 className={TitleSyle}>About</h1>
-                <p className="animate-fade-in text-white font-secondary lg:text-largeParagraph sm:text-mobileParagraph sm:mx-7 mb-20 sm:mt-10 max-sm:mx-6 max-sm:mb-17">I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, <br /> automation, and CRM management (GoHighLevel). I deliver efficient, creative, <br />and results-driven digital solutions.</p>
+                <p className="animate-fade-in font-secondary lg:text-largeParagraph sm:text-mobileParagraph sm:mx-7 mb-20 sm:mt-10 max-sm:mx-6 max-sm:mb-17 text-colorForText">I’m Paul Jhon Magbanua, a Front-End Developer skilled in coding, CMS, <br /> automation, and CRM management (GoHighLevel). I deliver efficient, creative, <br />and results-driven digital solutions.</p>
 
                 <p className="text-smallParagraph sm:text-mobileParagraph mb-10 text-green max-sm:text-lg max-sm:mb-5"><i>Watch the video to learn more!</i></p>
                 <video src={videoSource} controls className={videoStyle}></video>
